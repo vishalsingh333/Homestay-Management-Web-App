@@ -1,6 +1,6 @@
-<h1 align="center">Hotel Booking Web App</h1>
+<h1 align="center">Homestay Management Web App</h1>
   <p align="center">
-    A hotel room booking web app with MERN Stack.    <br />
+    A homestay management web app with MERN Stack.    <br />
     <a href="https://hotel-booking-web-app.vercel.app/">Live Site</a>
     .
     <a href="https://github.com/DebjitPramanick/Hotel-Booking-Web-App/issues">Report Bug</a>
@@ -37,10 +37,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="./demo/ss1.png" alt=""/>
+
 <br>
 
-Simple hotel booking app with content management system. Users can book rooms in different hotels for specific dates. Hotel managers can create, update, delete a hotel and its rooms. Admin can manage everything in the app.
+Simple homestay management app with content management system. Users can book rooms in different homestay for specific dates. Homestay managers can create, update, delete a homestay and its rooms. Admin can manage everything in the app.
 
 ### Built With
 * [React](https://reactjs.org/)
@@ -65,7 +65,7 @@ These things must be installed in your system.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/DebjitPramanick/Hotel-Booking-Web-App.git
+   git clone https://github.com/vishalsingh333/Homestay-Management-Web-App
    ```
 2. Open the project folder
 4. Now open MongoDB
@@ -114,7 +114,7 @@ Pass: 1234
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/DebjitPramanick/Hotel-Booking-Web-App/issues) for a list of proposed features (and known issues).
+See the [open issues]((https://github.com/vishalsingh333/Homestay-Management-Web-App)/issues) for a list of proposed features (and known issues).
 
 
 
@@ -133,6 +133,4 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Twitter - [@debjitpmk](https://twitter.com/debjitpmk)<br/> 
-LinkedIn - [Debjit Pramanick](https://www.linkedin.com/in/debjit-pramanick-7a6a971b1/)<br/> 
-Project Link: [https://github.com/DebjitPramanick/Hotel-Booking-Web-App](https://github.com/DebjitPramanick/Hotel-Booking-Web-App)
+Project Link: [https://github.com/DebjitPramanick/Hotel-Booking-Web-App](https://github.com/vishalsingh333/Homestay-Management-Web-App)
