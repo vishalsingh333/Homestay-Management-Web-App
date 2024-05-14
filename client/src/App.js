@@ -17,6 +17,8 @@ import { ToastContainer } from "react-toastify";
 import { GET_USER } from "./graphql/queries/userQueries";
 import { GENERATE_TOKEN } from "./graphql/mutations/userMutations";
 
+import ContactUs from "./pages/ContactUs";
+import AboutUs from "./pages/AboutUs";
 import Logout from "./pages/Auth/Logout";
 import Home from "./pages/Home/Home";
 import Explore from "./pages/Explore/Explore";
@@ -160,6 +162,9 @@ function App() {
                   )
                 }
               ></Route>
+
+              <Route exact path="/contact-us" element={<ContactUs />} />
+              <Route exact path="/about-us" element={<AboutUs />} />
 
             </Routes>
           </Suspense>

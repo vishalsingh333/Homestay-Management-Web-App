@@ -123,16 +123,16 @@ const Profile = () => {
 
             <Text style={{ position: 'relative', width: 'fit-content' }}>
                 Hello {user.name}
-                {user.isManager && (<Badge>M</Badge>)}
+                {user.isManager?(<Badge>M</Badge>):(<Badge>U</Badge>)}
             </Text>
             <Text className='small' style={{ marginBottom: '8px' }}>
                 Joined on {getEasyDate(user.joined)}
             </Text>
-            <Text className='small'>Type: {user.isManager ? 'Hotel Manager' : user.isAdmin ? 'Admin' : 'User'}</Text>
+            <Text className='small'>Type: {user.isManager ? 'Homestay Manager' : user.isAdmin ? 'Admin' : 'User'}</Text>
             {!user.isManager ?
                 <FormButton style={{ margin: '16px 0', borderRadius: '2px' }}
-                    onClick={() => setOpen({ state: true, title: 'Add Hotel', params: null, action: 'add' })}>
-                    Add My Hotel</FormButton>
+                    onClick={() => setOpen({ state: true, title: 'Add Homestay', params: null, action: 'add' })}>
+                    Add My Homestay</FormButton>
                 : null}
 
             <Fields className='flex'>
@@ -156,7 +156,7 @@ const Profile = () => {
                 <Fields>
                     <label>DOB</label>
                     {/* <Input value={getEasyDate(user.dob)}></Input> */}
-                    <DatePicker selected={new Date(curUser.dob)}
+                    <DatePicker selected={new Date(curUser.dob)} editable
                         onChange={(date) => setCurUser({ ...curUser, dob: date })}
                     />
                 </Fields>

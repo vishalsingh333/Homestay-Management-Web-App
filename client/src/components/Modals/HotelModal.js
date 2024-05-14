@@ -173,18 +173,24 @@ const HotelModal = (props) => {
                     <>
                         <CloseIcon className="close-icon" onClick={() => props.setHotelModal(false)} />
                         <ModalTitle>{props.title}</ModalTitle>
-                        <ImageUpload imageUrl={hotel.image} refPath={`images/hotels/${hotel.id}/hotelImage`}
-                            setImageURL={(val) => setHotel({ ...hotel, image: val })} single={true} />
+                        <ImageUpload
+                            imageUrl={hotel.image}
+                            refPath={`images/hotels/${hotel.id}/hotelImage`}
+                            setImageURL={(val) => setHotel({ ...hotel, image: val })}
+                            onChange={(e) => setHotel({ ...hotel, image: e.target.val })}
+                            single={true}
+                            editable={props.action === 'update'} // Pass boolean prop based on action
+                        />
 
                         <form onSubmit={props.action === 'update' ? updateCurHotel : addNewHotel}>
                             <Input required="true" style={{ marginBottom: '16px' }}
                                 value={hotel.name} onChange={(e) => setHotel({ ...hotel, name: e.target.value })}
-                                placeholder="Hotel name">
+                                placeholder="Homestay name">
                             </Input>
 
                             <TextArea required="true" style={{ marginBottom: '16px' }}
                                 value={hotel.description} onChange={(e) => setHotel({ ...hotel, description: e.target.value })}
-                                placeholder="Hotel description"></TextArea>
+                                placeholder="Homestay description"></TextArea>
 
                             <Input required="true" style={{ marginBottom: '16px' }}
                                 value={hotel.location} onChange={(e) => setHotel({ ...hotel, location: e.target.value })}

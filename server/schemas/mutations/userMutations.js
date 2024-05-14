@@ -146,6 +146,24 @@ const makeManager = { // For making an user manager
     }
 }
 
+const makeAdmin = { // For making an user manager
+    type: UserType,
+    args: {
+        id: { type: new GraphQLNonNull(GraphQLID) },
+    },
+    async resolve(parent, args) {
+        if (!args.id) {
+            throw new Error("ID is not given.")
+        }
+        else {
+            let user = await User.findByIdAndUpdate(args.id, {
+                isAdmin: true
+            }, { new: true })
+            return user
+        }
+    }
+}
+
 const blockUser = { // For block user or manager
     type: UserType,
     args: {
@@ -164,6 +182,26 @@ const blockUser = { // For block user or manager
     }
 }
 
+// userMutation.js
+
+const getUsers = {
+    type: new GraphQLList(UserType), // Assuming UserType represents the structure of a user
+    resolve: async () => {
+        try {
+            // Retrieve all registered users from the database
+            const users = await User.find();
+            return users;
+        } catch (error) {
+            throw new Error("Error retrieving users: " + error.message);
+        }
+    }
+
+
+    
+};
+
+
+
 
 module.exports = {
     createUser,
@@ -172,4 +210,6 @@ module.exports = {
     deleteAccount,
     makeManager,
     blockUser,
+    getUsers,
+    makeAdmin
 }

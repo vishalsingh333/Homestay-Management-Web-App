@@ -17,7 +17,12 @@ mongoose.connect(mongoURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-mongoose.connection.once('open', () => console.log("DB Connected..."))
+mongoose.connection.once('open', () => {
+    console.log("DB Connected...");
+    console.log(process.env.MONGO_URL);
+
+
+})
 
 app.use("/graphql", graphqlHTTP({
     schema,
@@ -26,3 +31,8 @@ app.use("/graphql", graphqlHTTP({
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log("Sever is running..."))
 app.get('/', (req,res) => res.send("Auth system..."))
+
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something went wrong!');
+});

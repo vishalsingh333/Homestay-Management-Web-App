@@ -41,7 +41,7 @@ const BookingsList = (props) => {
             <SearchBar
                 query={query}
                 setQuery={setQuery}
-                placeholder="Search bookings by hotel names..." />
+                placeholder="Search bookings by homestays names..." />
 
             <Text style={{ fontSize: '20px', margin: '26px 0' }}>Upcoming Bookings</Text>
 

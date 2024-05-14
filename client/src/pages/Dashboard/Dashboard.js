@@ -135,8 +135,8 @@ const Dashboard = () => {
                 setRoomModal({ state: true, title: 'Add New Room', params: null, action: 'add' })
         },
         {
-            label: 'Edit Hotel', icon: <EditIcon />, action: () =>
-                setHotelModal({ state: true, title: 'Update Hotel Details', params: null, action: 'update' })
+            label: 'Edit Homestay', icon: <EditIcon />, action: () =>
+                setHotelModal({ state: true, title: 'Update Homestay Details', params: null, action: 'update' })
         }
     ]
 

@@ -65,11 +65,11 @@ const SelectBox = (props) => {
     const dec = (p) => {
         if (p === 'children') {
             if (count.children === 0) return
-            setCount({ ...count, children: count.children + 1 })
+            setCount({ ...count, children: count.children - 1 })
         }
         else {
             if (count.adults === 0) return
-            setCount({ ...count, adults: count.adults + 1 })
+            setCount({ ...count, adults: count.adults - 1 })
         }
     }
 

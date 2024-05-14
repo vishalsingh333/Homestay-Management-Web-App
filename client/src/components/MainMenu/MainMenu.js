@@ -78,20 +78,30 @@ const MainMenu = () => {
             path: '/profile'
         },
         {
+            name: 'Contact Us',
+            path: '/contact-us'
+        },
+        {
+            name: 'About Us',
+            path: '/about-us'
+        },
+        {
             name: 'Log Out',
             path: '/logout'
         }
     ]
 
     if(user && user.isManager) {
-        let lOpt = menuOptions.slice(3, 5)
+        let lOpt = menuOptions.slice(3, 7)
         menuOptions = menuOptions.slice(0, 3)
         menuOptions.push({name: 'Dashboard', path: '/dashboard'})
         menuOptions = menuOptions.concat(lOpt)
     }
 
     return (
-        <div className={`main-menu-container ${menuOpen ? 'open' : ''}`}>
+        <div className={`main-menu-container ${menuOpen ? 'open' : ''}`}
+            
+        >
             {menuOpen && (
                 <MenuContent>
                     <FadeIn delay={200}>
@@ -114,7 +124,9 @@ const MainMenu = () => {
                     </ListItems>
                 </MenuContent>
             )}
+            
         </div>
+         
     )
 }
 

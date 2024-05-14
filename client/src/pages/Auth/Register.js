@@ -27,7 +27,7 @@ const Register = () => {
         name: '',
         username: '',
         email: '',
-        dob: new Date(),
+        dob: '',
         password: ''
     })
 
@@ -84,7 +84,9 @@ const Register = () => {
                                 onChange={(e) => setInfo({ ...info, email: e.target.value })}></Input>
                             <InputContainer style={{ marginRight: '16px', marginTop: '10px', marginBottom: '10px' }}>
                                 <DatePicker selected={info.dob}
-                                    onChange={(date) => setInfo({ ...info, dob: date })} />
+                                    onChange={(date) => setInfo({ ...info, dob: date })}
+                                    maxDate={new Date('2008-01-01')}
+                                    placeholderText="Select Date of Birth" />
                             </InputContainer>
                             <Input style={{ margin: '10px 0' }}
                                 placeholder="Password"

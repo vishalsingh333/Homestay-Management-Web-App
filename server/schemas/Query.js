@@ -3,6 +3,7 @@ const { getBooking, getRoomBookings, getUserBookings, getHotelBookings, getAllBo
 const { getHotel, getAllHotels, searchHotels, getHotelByID } = require('./queries/hotelQueries.js')
 const { getRoom, getAllRooms, getAvailableRooms } = require('./queries/roomQueries.js')
 const { login, getUser, getAllUsers } = require('./queries/userQueries.js')
+const { getUsers } = require('./mutations/userMutations.js')
 
 const { GraphQLObjectType } = graphql
 
@@ -23,7 +24,8 @@ const Query = new GraphQLObjectType({
         getAllBookings,
         getUserBookings,
         getHotelBookings,
-        getRoomBookings
+        getRoomBookings,
+        getUsers
     }
 })
 

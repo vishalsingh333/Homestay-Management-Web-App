@@ -81,7 +81,7 @@ const QuickStat = (props) => {
                 </Block>
                 {/* <Divider /> */}
                 <Block
-                    onClick={() => props.setBookingsModal({ state: true, title: 'Hotel Bookings', param: bookings })}>
+                    onClick={() => props.setBookingsModal({ state: true, title: 'Homestay Bookings', param: bookings })}>
                     <h2>{bookings.length}</h2>
                     <Text>All Bookings (Click)</Text>
                 </Block>

@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "WanderStay",
+  "name": "WanderStay - Homestay Management",
   "icons": [
     {
       "src": "favicon.ico",
@@ -16,10 +16,17 @@
       "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
+
   "start_url": ".",
   "display": "standalone",
+  "description": "Simplify homestay management with WanderStay. Seamlessly book, manage, and showcase your properties, while providing guests with a delightful booking experience. Stay organized and efficient with WanderStay's intuitive tools and comprehensive management features.",
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }

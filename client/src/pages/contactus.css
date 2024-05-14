@@ -1,0 +1,236 @@
+/* contactus.css */
+.contact-us-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 175vh; /* Adjust height as needed */
+    top: -20px;
+    
+}
+
+.contact-info {
+    color: #ff6e29; /* Black color */
+     margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgb(141, 137, 137);
+}
+.contact-info h2{
+    font-weight: bold;
+    font-size: 45px;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+}
+
+/* contactus.css */
+.qna{
+    display: flex;
+    
+    margin-top: 50px;
+    gap: 2em;
+    width: 100%;
+    justify-content: center;
+}
+
+.support-section {
+    margin: 20px; /* Adjust margin as needed */
+    padding: 20px; /* Adjust padding as needed */
+    width: 40%;
+    box-shadow: 2px 3px 7px 0px #14141482;
+    border-radius: 10px;
+    background-color: rgb(254, 251, 255);
+}
+
+.support-section h2 {
+    color: #f16d59; /* Black color */
+    font-weight: bold;
+    text-align: center;
+    font-size: 34px; /* Adjust font size as needed */
+}
+
+.support-section p {
+    color: black; /* Orange color */
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.support-section form {
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.support-section form .form-group {
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.support-section form label {
+    color: #000000; /* Black color */
+    font-weight: bold;
+    
+}
+
+.support-section form input[type="text"],
+.support-section form input[type="email"],
+.support-section form input[type="file"],
+.support-section form textarea,
+.support-section form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 50px;
+}
+
+.support-section form button[type="submit"] {
+    background-color: #ff6e29; /* Orange color */
+    display: flex;
+    justify-content: center;
+    color: #ffffff; /* White text color */
+    padding: 10px 20px;
+    width: 33%;
+    font-size: 21px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.support-section form button[type="submit"]:hover {
+    background-color: rgb(219, 5, 5);
+    color: white; /* Darker shade of orange on hover */
+    
+}
+
+.scicon{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.emph{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+/* contactus.css */
+
+.manager-assistance {
+    margin: 20px; /* Adjust margin as needed */
+    padding: 20px; /* Adjust padding as needed */
+    box-shadow: 2px 3px 7px 0px #14141482;
+    text-align: center; /* Center align text */
+    height: 50%;
+    border-radius: 10px;
+    background-color: rgb(254, 251, 255);
+}
+
+.manager-assistance h2 {
+    color: #f16d59; /* Black color */
+    font-weight: bold;
+    font-size: 34px; /* Adjust font size as needed */
+}
+
+.manager-assistance p {
+    color: #000000; /* Orange color */
+    margin-top: 30px; /* Adjust margin as needed */
+    line-height: 33px;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+
+.manager-assistance a {
+    color: #ff6e29; /* Orange color */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.manager-assistance a:hover {
+    color: #e05e21; /* Darker shade of orange on hover */
+}
+
+.q2n{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+}
+
+.social-media {
+    margin: 20px; /* Adjust margin as needed */
+    padding: 20px; /* Adjust padding as needed */
+    box-shadow: 2px 3px 7px 0px #14141482;
+    text-align: center; /* Center align text */
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgb(254, 251, 255);
+}
+
+.social-media h2 {
+    color: #f16d59; /* Black color */
+    font-weight: bold;
+    font-size: 34px;/* Adjust font size as needed */
+}
+
+.social-media p {
+    color: #000000; /* Orange color */
+    margin-top: 10px; /* Adjust margin as needed */
+    line-height: 33px;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+
+button, a {
+    color: #ff6e29; /* Orange color */
+    text-decoration: none;
+}
+
+/* Background */
+body {
+    background-color: #ffffff; /* Classic white */
+}
+
+
+.feedback {
+    margin: 20px; /* Adjust margin as needed */
+    padding: 20px; /* Adjust padding as needed */
+    box-shadow: 2px 3px 7px 0px #14141482;
+    text-align: center; /* Center align text */
+    /* height: 50%; */
+    width: 80%;
+    border-radius: 10px;
+    background-color: rgb(254, 251, 255);
+}
+
+.feedback h2 {
+    color: #f16d59; /* Black color */
+    font-weight: bold;
+    font-size: 34px; /* Add margin at the bottom */
+}
+
+.feedback p {
+    color: #000000; /* Orange color */
+    margin-top: 30px; /* Adjust margin as needed */
+    line-height: 33px;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+
+.feedback a {
+    color: #ff6e29; /* Link color */
+    font-weight: bold; /* Bold font weight */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.feedback a:hover {
+    color: #e05e21; /* Hover color */
+}

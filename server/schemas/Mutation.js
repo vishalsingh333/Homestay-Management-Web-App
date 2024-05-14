@@ -1,5 +1,5 @@
 const graphql = require('graphql')
-const { createUser, generateToken, makeManager, updateProfile, deleteAccount, blockUser } = require('./mutations/userMutations.js')
+const { createUser, generateToken, makeManager, updateProfile, deleteAccount, blockUser, getUsers, makeAdmin } = require('./mutations/userMutations.js')
 const { addHotel, deleteHotel, updateHotel } = require('./mutations/hotelMutations.js')
 const { addRoom, deleteRoom, updateRoom } = require('./mutations/roomMutations.js')
 const { addBooking, cancelBooking } = require('./mutations/bookingMutation.js')
@@ -24,7 +24,9 @@ const Mutation = new GraphQLObjectType({
         deleteRoom,
         addBooking,
         cancelBooking,
-        payAmount
+        payAmount,
+        makeAdmin
+
     }
 })
 

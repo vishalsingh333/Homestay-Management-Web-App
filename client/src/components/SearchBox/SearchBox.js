@@ -36,7 +36,7 @@ const SearchBox = (props) => {
     const styles = props.styles
 
     const [checkIn, setCheckIn] = useState(data ? new Date(data.from) : new Date());
-    const [checkOut, setCheckOut] = useState(data ? new Date(data.to) : new Date());
+    const [checkOut, setCheckOut] = useState(null);
     const [query, setQuery] = useState(data ? data.location : '')
     const [count, setCount] = useState({
         children: data ? data.people.children : 0,
@@ -66,26 +66,34 @@ const SearchBox = (props) => {
             { state: searchData })
     }
 
+    const handleCheckOutChange = (date) => {
+        // Prevent selection of check-out date earlier than check-in date
+        
+        setCheckOut(date);
+    };
 
     return (
         <SearchBoxContainer style={styles}>
             <FormTitle style={{ marginBottom: '20px', color: '#000', fontSize: '20px' }}>Travel where you want</FormTitle>
             <form onSubmit={handleSearch}>
-                <Input placeholder="Enter hotel name or location"
+                <Input placeholder="Enter homestay name or location"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     required={true}></Input>
                 <Extras>
-                    <InputContainer>
+                <InputContainer>
                         <label style={{ color: '#000' }}>Check-In</label>
                         <DatePicker selected={checkIn}
+                            minDate={new Date()}
                             onChange={(date) => setCheckIn(date)} />
                     </InputContainer>
 
                     <InputContainer>
                         <label style={{ color: '#000' }}>Check-Out</label>
-                        <DatePicker selected={checkOut}
-                            onChange={(date) => setCheckOut(date)} />
+                        <DatePicker selected={checkOut || checkIn}
+                            minDate={checkIn}
+                            onChange={handleCheckOutChange} 
+                         />
                     </InputContainer>
 
                     <InputContainer>

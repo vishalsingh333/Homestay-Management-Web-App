@@ -16,6 +16,6 @@ const UserSchema = new Schema({
     isManager: {type: Boolean, default: false},
     isBlocked: {type: Boolean, default: false},
     joined: {type: Date, default: Date.now}
-})
+},{ collection: 'users' });
 
 module.exports = new mongoose.model('User', UserSchema)

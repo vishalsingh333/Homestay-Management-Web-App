@@ -22,7 +22,7 @@ const Login = () => {
     const [login] = useLazyQuery(LOGIN_USER, {
         fetchPolicy: 'network-only',
         onCompleted: res => {
-            let user = res.login
+            let user = res.logini
             localStorage.setItem('user', JSON.stringify(user))
             setTimeout(() => {
                 user.isManager ?
@@ -78,8 +78,11 @@ const Login = () => {
                                     onClick={() => navigate('/register')}
                                 >Register</FormButton>
                                 <FormButton type="submit">Log In</FormButton>
-                            </ButtonsContainer>
+                                </ButtonsContainer>
                         </form>
+                        <br></br>
+                        <div>For queries:<a href='mailto:contact@wanderstay.com'>yashdukiya31@gmail.com</a></div>
+                            
                     </FormContainer>
                 ) : <Loader />}
             </AuthContainer>

@@ -7,4 +7,4 @@ const {GraphQLSchema} = graphql
 module.exports = new GraphQLSchema({
     query: Query,
     mutation: Mutation
-})
+})  
