@@ -133,4 +133,4 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/DebjitPramanick/Hotel-Booking-Web-App](https://github.com/vishalsingh333/Homestay-Management-Web-App)
+Project Link: (https://github.com/vishalsingh333/Homestay-Management-Web-App)
